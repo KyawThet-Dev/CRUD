@@ -1,4 +1,4 @@
-name: flutter_sample_crud
+name: crud
 description: A new Flutter project.
 publish_to: "none"
 
@@ -16,7 +16,7 @@ dependencies:
   connectivity_plus: ^3.0.3
   internet_connection_checker: ^1.0.0+1
   # Navigation and routing
-  auto_route: ^6.0.4
+  auto_route: ^6.4.0
   # state, provider
   hooks_riverpod: ^2.3.2
   # Functional programming
@@ -37,15 +37,16 @@ dependencies:
   uuid: ^3.0.7
 
   nil: ^1.1.1
+  salomon_bottom_bar: ^3.3.2
+  auto_route_generator: ^6.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  auto_route_generator: ^6.0.2
-  freezed: ^2.3.4
+  freezed: ^2.4.5
   json_serializable: ^6.3.1
-  build_runner: any
+  build_runner: ^2.2.1
 
 flutter:
   uses-material-design: true

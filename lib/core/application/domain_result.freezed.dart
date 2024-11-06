@@ -12,7 +12,7 @@ part of 'domain_result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DomainResult<T> {
@@ -75,25 +75,25 @@ class _$DomainResultCopyWithImpl<T, $Res, $Val extends DomainResult<T>>
 }
 
 /// @nodoc
-abstract class _$$_NoInternetCopyWith<T, $Res> {
-  factory _$$_NoInternetCopyWith(
-          _$_NoInternet<T> value, $Res Function(_$_NoInternet<T>) then) =
-      __$$_NoInternetCopyWithImpl<T, $Res>;
+abstract class _$$NoInternetImplCopyWith<T, $Res> {
+  factory _$$NoInternetImplCopyWith(
+          _$NoInternetImpl<T> value, $Res Function(_$NoInternetImpl<T>) then) =
+      __$$NoInternetImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$_NoInternetCopyWithImpl<T, $Res>
-    extends _$DomainResultCopyWithImpl<T, $Res, _$_NoInternet<T>>
-    implements _$$_NoInternetCopyWith<T, $Res> {
-  __$$_NoInternetCopyWithImpl(
-      _$_NoInternet<T> _value, $Res Function(_$_NoInternet<T>) _then)
+class __$$NoInternetImplCopyWithImpl<T, $Res>
+    extends _$DomainResultCopyWithImpl<T, $Res, _$NoInternetImpl<T>>
+    implements _$$NoInternetImplCopyWith<T, $Res> {
+  __$$NoInternetImplCopyWithImpl(
+      _$NoInternetImpl<T> _value, $Res Function(_$NoInternetImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_NoInternet<T> implements _NoInternet<T> {
-  const _$_NoInternet();
+class _$NoInternetImpl<T> implements _NoInternet<T> {
+  const _$NoInternetImpl();
 
   @override
   String toString() {
@@ -101,9 +101,9 @@ class _$_NoInternet<T> implements _NoInternet<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NoInternet<T>);
+        (other.runtimeType == runtimeType && other is _$NoInternetImpl<T>);
   }
 
   @override
@@ -173,22 +173,24 @@ class _$_NoInternet<T> implements _NoInternet<T> {
 }
 
 abstract class _NoInternet<T> implements DomainResult<T> {
-  const factory _NoInternet() = _$_NoInternet<T>;
+  const factory _NoInternet() = _$NoInternetImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$_DataCopyWith<T, $Res> {
-  factory _$$_DataCopyWith(_$_Data<T> value, $Res Function(_$_Data<T>) then) =
-      __$$_DataCopyWithImpl<T, $Res>;
+abstract class _$$DataImplCopyWith<T, $Res> {
+  factory _$$DataImplCopyWith(
+          _$DataImpl<T> value, $Res Function(_$DataImpl<T>) then) =
+      __$$DataImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T entity});
 }
 
 /// @nodoc
-class __$$_DataCopyWithImpl<T, $Res>
-    extends _$DomainResultCopyWithImpl<T, $Res, _$_Data<T>>
-    implements _$$_DataCopyWith<T, $Res> {
-  __$$_DataCopyWithImpl(_$_Data<T> _value, $Res Function(_$_Data<T>) _then)
+class __$$DataImplCopyWithImpl<T, $Res>
+    extends _$DomainResultCopyWithImpl<T, $Res, _$DataImpl<T>>
+    implements _$$DataImplCopyWith<T, $Res> {
+  __$$DataImplCopyWithImpl(
+      _$DataImpl<T> _value, $Res Function(_$DataImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -196,7 +198,7 @@ class __$$_DataCopyWithImpl<T, $Res>
   $Res call({
     Object? entity = freezed,
   }) {
-    return _then(_$_Data<T>(
+    return _then(_$DataImpl<T>(
       freezed == entity
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
@@ -207,8 +209,8 @@ class __$$_DataCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_Data<T> implements _Data<T> {
-  const _$_Data(this.entity);
+class _$DataImpl<T> implements _Data<T> {
+  const _$DataImpl(this.entity);
 
   @override
   final T entity;
@@ -219,10 +221,10 @@ class _$_Data<T> implements _Data<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Data<T> &&
+            other is _$DataImpl<T> &&
             const DeepCollectionEquality().equals(other.entity, entity));
   }
 
@@ -233,8 +235,8 @@ class _$_Data<T> implements _Data<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DataCopyWith<T, _$_Data<T>> get copyWith =>
-      __$$_DataCopyWithImpl<T, _$_Data<T>>(this, _$identity);
+  _$$DataImplCopyWith<T, _$DataImpl<T>> get copyWith =>
+      __$$DataImplCopyWithImpl<T, _$DataImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -300,10 +302,10 @@ class _$_Data<T> implements _Data<T> {
 }
 
 abstract class _Data<T> implements DomainResult<T> {
-  const factory _Data(final T entity) = _$_Data<T>;
+  const factory _Data(final T entity) = _$DataImpl<T>;
 
   T get entity;
   @JsonKey(ignore: true)
-  _$$_DataCopyWith<T, _$_Data<T>> get copyWith =>
+  _$$DataImplCopyWith<T, _$DataImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

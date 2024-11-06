@@ -7,7 +7,7 @@ final dioProvider = Provider(
     ..options = BaseOptions(
       // baseUrl: 'https://646ccc017b42c06c3b2c0977.mockapi.io/api/contact',
       baseUrl:
-          "https://64e5da0609e64530d17f2458.mockapi.io/api/contacts", // with sbs@gmail.com
+          "https://66f2801171c84d80587581a3.mockapi.io/api/music", // with sbs@gmail.com
       contentType: 'application/json',
     ),
 );

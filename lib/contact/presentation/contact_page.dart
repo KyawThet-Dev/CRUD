@@ -1,8 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_sample_crud/contact/domain/contact.dart';
-import 'package:flutter_sample_crud/contact/shared/contact_provider.dart';
-import 'package:flutter_sample_crud/core/presentation/router/app_router.gr.dart';
+import 'package:crud/contact/domain/contact.dart';
+import 'package:crud/contact/shared/contact_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 @RoutePage()
@@ -75,23 +74,6 @@ class _HomePageState extends ConsumerState<ContactPage> {
           });
     });
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Sample App',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.blueAccent,
-        actions: [
-          IconButton(
-            onPressed: () =>
-                ref.read(contactNotifierProvider.notifier).getContacts(),
-            icon: const Icon(
-              Icons.refresh,
-              color: Colors.white,
-            ),
-          ),
-        ],
-      ),
       body: state.when(
         initial: () => const SizedBox(),
         loading: () => const Center(
@@ -114,28 +96,32 @@ class _HomePageState extends ConsumerState<ContactPage> {
         empty: () => const Center(child: Text('No Data')),
         success: (contacts) => ListView.builder(
           itemCount: contactList.length,
-          itemBuilder: (context, index) => Card(
-            color: Colors.grey.shade300,
-            shadowColor: Colors.blueAccent,
-            child: ListTile(
-                leading: CircleAvatar(
-                    backgroundColor: Colors.blue, child: Text('${index + 1}')),
-                title: Text(contactList[index].name),
-                subtitle: Text(contactList[index].phone),
-                trailing: IconButton(
-                    onPressed: () {
-                      ref
-                          .read(saveContactNotifierProvider.notifier)
-                          .deleteContact(contactList[index].id);
-                      setState(() {
-                        contactList.removeAt(index);
-                      });
-                    },
-                    icon: const Icon(
-                      Icons.delete,
-                      color: Colors.red,
-                    )),
-                onTap: () => _showDialog(context, contactList[index])),
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+            child: Card(
+              color: Colors.grey.shade300,
+              shadowColor: Colors.blueAccent,
+              child: ListTile(
+                  leading: CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      child: Text('${index + 1}')),
+                  title: Text(contactList[index].name),
+                  subtitle: Text(contactList[index].phone),
+                  trailing: IconButton(
+                      onPressed: () {
+                        ref
+                            .read(saveContactNotifierProvider.notifier)
+                            .deleteContact(contactList[index].id);
+                        setState(() {
+                          contactList.removeAt(index);
+                        });
+                      },
+                      icon: const Icon(
+                        Icons.delete,
+                        color: Colors.red,
+                      )),
+                  onTap: () => _showDialog(context, contactList[index])),
+            ),
           ),
         ),
         error: (error) => const Center(

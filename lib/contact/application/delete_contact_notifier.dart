@@ -1,4 +1,4 @@
-import 'package:flutter_sample_crud/core/domain/response_info_error.dart';
+import 'package:crud/core/domain/response_info_error.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'delete_contact_notifier.freezed.dart';

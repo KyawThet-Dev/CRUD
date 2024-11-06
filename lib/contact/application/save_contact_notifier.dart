@@ -1,5 +1,5 @@
-import 'package:flutter_sample_crud/contact/infrastructure/contact_remote_service.dart';
-import 'package:flutter_sample_crud/core/domain/response_info_error.dart';
+import 'package:crud/contact/infrastructure/contact_remote_service.dart';
+import 'package:crud/core/domain/response_info_error.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

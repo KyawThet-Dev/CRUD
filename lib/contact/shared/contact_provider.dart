@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample_crud/contact/application/contact_notifier.dart';
-import 'package:flutter_sample_crud/contact/application/save_contact_notifier.dart';
-import 'package:flutter_sample_crud/core/shared/providers.dart';
-import 'package:flutter_sample_crud/contact/infrastructure/contact_remote_service.dart';
+import 'package:crud/contact/application/contact_notifier.dart';
+import 'package:crud/contact/application/save_contact_notifier.dart';
+import 'package:crud/core/shared/providers.dart';
+import 'package:crud/contact/infrastructure/contact_remote_service.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../domain/contact.dart';

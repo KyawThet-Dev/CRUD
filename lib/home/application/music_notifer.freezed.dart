@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'contact_notifier.dart';
+part of 'music_notifer.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,15 +15,15 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$ContactState {
+mixin _$MusicState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() noConnection,
     required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
     required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,8 +32,8 @@ mixin _$ContactState {
     TResult? Function()? loading,
     TResult? Function()? noConnection,
     TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
     TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,8 +42,8 @@ mixin _$ContactState {
     TResult Function()? loading,
     TResult Function()? noConnection,
     TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
     TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -53,8 +53,8 @@ mixin _$ContactState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_NoConnection value) noConnection,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,8 +63,8 @@ mixin _$ContactState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_NoConnection value)? noConnection,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,24 +73,24 @@ mixin _$ContactState {
     TResult Function(_Loading value)? loading,
     TResult Function(_NoConnection value)? noConnection,
     TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ContactStateCopyWith<$Res> {
-  factory $ContactStateCopyWith(
-          ContactState value, $Res Function(ContactState) then) =
-      _$ContactStateCopyWithImpl<$Res, ContactState>;
+abstract class $MusicStateCopyWith<$Res> {
+  factory $MusicStateCopyWith(
+          MusicState value, $Res Function(MusicState) then) =
+      _$MusicStateCopyWithImpl<$Res, MusicState>;
 }
 
 /// @nodoc
-class _$ContactStateCopyWithImpl<$Res, $Val extends ContactState>
-    implements $ContactStateCopyWith<$Res> {
-  _$ContactStateCopyWithImpl(this._value, this._then);
+class _$MusicStateCopyWithImpl<$Res, $Val extends MusicState>
+    implements $MusicStateCopyWith<$Res> {
+  _$MusicStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -107,7 +107,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$ContactStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$MusicStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -121,7 +121,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'ContactState.initial()';
+    return 'MusicState.initial()';
   }
 
   @override
@@ -140,8 +140,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function() noConnection,
     required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
     required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
   }) {
     return initial();
   }
@@ -153,8 +153,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function()? noConnection,
     TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
     TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
   }) {
     return initial?.call();
   }
@@ -166,8 +166,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function()? noConnection,
     TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
     TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -183,8 +183,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_NoConnection value) noConnection,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
   }) {
     return initial(this);
   }
@@ -196,8 +196,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_NoConnection value)? noConnection,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
   }) {
     return initial?.call(this);
   }
@@ -209,8 +209,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_NoConnection value)? noConnection,
     TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -220,7 +220,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements ContactState {
+abstract class _Initial implements MusicState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -233,7 +233,7 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$ContactStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$MusicStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
@@ -247,7 +247,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'ContactState.loading()';
+    return 'MusicState.loading()';
   }
 
   @override
@@ -266,8 +266,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function() noConnection,
     required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
     required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
   }) {
     return loading();
   }
@@ -279,8 +279,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function()? noConnection,
     TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
     TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
   }) {
     return loading?.call();
   }
@@ -292,8 +292,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function()? noConnection,
     TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
     TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -309,8 +309,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_NoConnection value) noConnection,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
   }) {
     return loading(this);
   }
@@ -322,8 +322,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_NoConnection value)? noConnection,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
   }) {
     return loading?.call(this);
   }
@@ -335,8 +335,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_NoConnection value)? noConnection,
     TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -346,7 +346,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements ContactState {
+abstract class _Loading implements MusicState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -359,7 +359,7 @@ abstract class _$$NoConnectionImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$NoConnectionImplCopyWithImpl<$Res>
-    extends _$ContactStateCopyWithImpl<$Res, _$NoConnectionImpl>
+    extends _$MusicStateCopyWithImpl<$Res, _$NoConnectionImpl>
     implements _$$NoConnectionImplCopyWith<$Res> {
   __$$NoConnectionImplCopyWithImpl(
       _$NoConnectionImpl _value, $Res Function(_$NoConnectionImpl) _then)
@@ -373,7 +373,7 @@ class _$NoConnectionImpl implements _NoConnection {
 
   @override
   String toString() {
-    return 'ContactState.noConnection()';
+    return 'MusicState.noConnection()';
   }
 
   @override
@@ -392,8 +392,8 @@ class _$NoConnectionImpl implements _NoConnection {
     required TResult Function() loading,
     required TResult Function() noConnection,
     required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
     required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
   }) {
     return noConnection();
   }
@@ -405,8 +405,8 @@ class _$NoConnectionImpl implements _NoConnection {
     TResult? Function()? loading,
     TResult? Function()? noConnection,
     TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
     TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
   }) {
     return noConnection?.call();
   }
@@ -418,8 +418,8 @@ class _$NoConnectionImpl implements _NoConnection {
     TResult Function()? loading,
     TResult Function()? noConnection,
     TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
     TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
     required TResult orElse(),
   }) {
     if (noConnection != null) {
@@ -435,8 +435,8 @@ class _$NoConnectionImpl implements _NoConnection {
     required TResult Function(_Loading value) loading,
     required TResult Function(_NoConnection value) noConnection,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
   }) {
     return noConnection(this);
   }
@@ -448,8 +448,8 @@ class _$NoConnectionImpl implements _NoConnection {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_NoConnection value)? noConnection,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
   }) {
     return noConnection?.call(this);
   }
@@ -461,8 +461,8 @@ class _$NoConnectionImpl implements _NoConnection {
     TResult Function(_Loading value)? loading,
     TResult Function(_NoConnection value)? noConnection,
     TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
     required TResult orElse(),
   }) {
     if (noConnection != null) {
@@ -472,7 +472,7 @@ class _$NoConnectionImpl implements _NoConnection {
   }
 }
 
-abstract class _NoConnection implements ContactState {
+abstract class _NoConnection implements MusicState {
   const factory _NoConnection() = _$NoConnectionImpl;
 }
 
@@ -485,7 +485,7 @@ abstract class _$$EmptyImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$EmptyImplCopyWithImpl<$Res>
-    extends _$ContactStateCopyWithImpl<$Res, _$EmptyImpl>
+    extends _$MusicStateCopyWithImpl<$Res, _$EmptyImpl>
     implements _$$EmptyImplCopyWith<$Res> {
   __$$EmptyImplCopyWithImpl(
       _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
@@ -499,7 +499,7 @@ class _$EmptyImpl implements _Empty {
 
   @override
   String toString() {
-    return 'ContactState.empty()';
+    return 'MusicState.empty()';
   }
 
   @override
@@ -518,8 +518,8 @@ class _$EmptyImpl implements _Empty {
     required TResult Function() loading,
     required TResult Function() noConnection,
     required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
     required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
   }) {
     return empty();
   }
@@ -531,8 +531,8 @@ class _$EmptyImpl implements _Empty {
     TResult? Function()? loading,
     TResult? Function()? noConnection,
     TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
     TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
   }) {
     return empty?.call();
   }
@@ -544,8 +544,8 @@ class _$EmptyImpl implements _Empty {
     TResult Function()? loading,
     TResult Function()? noConnection,
     TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
     TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -561,8 +561,8 @@ class _$EmptyImpl implements _Empty {
     required TResult Function(_Loading value) loading,
     required TResult Function(_NoConnection value) noConnection,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
   }) {
     return empty(this);
   }
@@ -574,8 +574,8 @@ class _$EmptyImpl implements _Empty {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_NoConnection value)? noConnection,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
   }) {
     return empty?.call(this);
   }
@@ -587,8 +587,8 @@ class _$EmptyImpl implements _Empty {
     TResult Function(_Loading value)? loading,
     TResult Function(_NoConnection value)? noConnection,
     TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -598,171 +598,8 @@ class _$EmptyImpl implements _Empty {
   }
 }
 
-abstract class _Empty implements ContactState {
+abstract class _Empty implements MusicState {
   const factory _Empty() = _$EmptyImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<Contact> contacts});
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$ContactStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? contacts = null,
-  }) {
-    return _then(_$SuccessImpl(
-      null == contacts
-          ? _value._contacts
-          : contacts // ignore: cast_nullable_to_non_nullable
-              as List<Contact>,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(final List<Contact> contacts) : _contacts = contacts;
-
-  final List<Contact> _contacts;
-  @override
-  List<Contact> get contacts {
-    if (_contacts is EqualUnmodifiableListView) return _contacts;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_contacts);
-  }
-
-  @override
-  String toString() {
-    return 'ContactState.success(contacts: $contacts)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            const DeepCollectionEquality().equals(other._contacts, _contacts));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_contacts));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() noConnection,
-    required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
-    required TResult Function(ResponseInfoError error) error,
-  }) {
-    return success(contacts);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? noConnection,
-    TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
-    TResult? Function(ResponseInfoError error)? error,
-  }) {
-    return success?.call(contacts);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? noConnection,
-    TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
-    TResult Function(ResponseInfoError error)? error,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(contacts);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_NoConnection value) noConnection,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Error value) error,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_NoConnection value)? noConnection,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Error value)? error,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoConnection value)? noConnection,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Success implements ContactState {
-  const factory _Success(final List<Contact> contacts) = _$SuccessImpl;
-
-  List<Contact> get contacts;
-  @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -776,7 +613,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$ContactStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$MusicStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
@@ -806,7 +643,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'ContactState.error(error: $error)';
+    return 'MusicState.error(error: $error)';
   }
 
   @override
@@ -833,8 +670,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function() loading,
     required TResult Function() noConnection,
     required TResult Function() empty,
-    required TResult Function(List<Contact> contacts) success,
     required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
   }) {
     return error(this.error);
   }
@@ -846,8 +683,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function()? noConnection,
     TResult? Function()? empty,
-    TResult? Function(List<Contact> contacts)? success,
     TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
   }) {
     return error?.call(this.error);
   }
@@ -859,8 +696,8 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function()? noConnection,
     TResult Function()? empty,
-    TResult Function(List<Contact> contacts)? success,
     TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -876,8 +713,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_NoConnection value) noConnection,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
   }) {
     return error(this);
   }
@@ -889,8 +726,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_NoConnection value)? noConnection,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
   }) {
     return error?.call(this);
   }
@@ -902,8 +739,8 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_NoConnection value)? noConnection,
     TResult Function(_Empty value)? empty,
-    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -913,11 +750,174 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements ContactState {
+abstract class _Error implements MusicState {
   const factory _Error(final ResponseInfoError error) = _$ErrorImpl;
 
   ResponseInfoError get error;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<MusicModel> music});
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$MusicStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? music = null,
+  }) {
+    return _then(_$SuccessImpl(
+      null == music
+          ? _value._music
+          : music // ignore: cast_nullable_to_non_nullable
+              as List<MusicModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl(final List<MusicModel> music) : _music = music;
+
+  final List<MusicModel> _music;
+  @override
+  List<MusicModel> get music {
+    if (_music is EqualUnmodifiableListView) return _music;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_music);
+  }
+
+  @override
+  String toString() {
+    return 'MusicState.succes(music: $music)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessImpl &&
+            const DeepCollectionEquality().equals(other._music, _music));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_music));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() noConnection,
+    required TResult Function() empty,
+    required TResult Function(ResponseInfoError error) error,
+    required TResult Function(List<MusicModel> music) succes,
+  }) {
+    return succes(music);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? noConnection,
+    TResult? Function()? empty,
+    TResult? Function(ResponseInfoError error)? error,
+    TResult? Function(List<MusicModel> music)? succes,
+  }) {
+    return succes?.call(music);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? noConnection,
+    TResult Function()? empty,
+    TResult Function(ResponseInfoError error)? error,
+    TResult Function(List<MusicModel> music)? succes,
+    required TResult orElse(),
+  }) {
+    if (succes != null) {
+      return succes(music);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_NoConnection value) noConnection,
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Success value) succes,
+  }) {
+    return succes(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoConnection value)? noConnection,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Success value)? succes,
+  }) {
+    return succes?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_NoConnection value)? noConnection,
+    TResult Function(_Empty value)? empty,
+    TResult Function(_Error value)? error,
+    TResult Function(_Success value)? succes,
+    required TResult orElse(),
+  }) {
+    if (succes != null) {
+      return succes(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Success implements MusicState {
+  const factory _Success(final List<MusicModel> music) = _$SuccessImpl;
+
+  List<MusicModel> get music;
+  @JsonKey(ignore: true)
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

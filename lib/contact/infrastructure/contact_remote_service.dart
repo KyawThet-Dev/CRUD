@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_sample_crud/core/config/app_strings.dart';
-import 'package:flutter_sample_crud/core/domain/response_info_error.dart';
-import 'package:flutter_sample_crud/core/infrastructure/dio_extensions.dart';
-import 'package:flutter_sample_crud/core/application/network_result.dart';
-import 'package:flutter_sample_crud/contact/domain/contact.dart';
+import 'package:crud/core/config/app_strings.dart';
+import 'package:crud/core/domain/response_info_error.dart';
+import 'package:crud/core/infrastructure/dio_extensions.dart';
+import 'package:crud/core/application/network_result.dart';
+import 'package:crud/contact/domain/contact.dart';
 
 class ContactRemoteService {
   final Dio _dio;
@@ -13,7 +13,8 @@ class ContactRemoteService {
   Future<Either<ResponseInfoError, NetworkResult<List<Contact>>>>
       getContacts() async {
     try {
-      final response = await _dio.get('/');
+      final response = await _dio
+          .get('https://646ccc017b42c06c3b2c0977.mockapi.io/api/contact/');
       var resData = response.data as List;
       if (response.statusCode == AppStrings.statusCode) {
         var jsonData = resData.map((e) => Contact.fromJson(e)).toList();

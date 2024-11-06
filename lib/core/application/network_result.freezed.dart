@@ -12,7 +12,7 @@ part of 'network_result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$NetworkResult<T> {
@@ -75,25 +75,25 @@ class _$NetworkResultCopyWithImpl<T, $Res, $Val extends NetworkResult<T>>
 }
 
 /// @nodoc
-abstract class _$$_NoConnectionCopyWith<T, $Res> {
-  factory _$$_NoConnectionCopyWith(
-          _$_NoConnection<T> value, $Res Function(_$_NoConnection<T>) then) =
-      __$$_NoConnectionCopyWithImpl<T, $Res>;
+abstract class _$$NoConnectionImplCopyWith<T, $Res> {
+  factory _$$NoConnectionImplCopyWith(_$NoConnectionImpl<T> value,
+          $Res Function(_$NoConnectionImpl<T>) then) =
+      __$$NoConnectionImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$_NoConnectionCopyWithImpl<T, $Res>
-    extends _$NetworkResultCopyWithImpl<T, $Res, _$_NoConnection<T>>
-    implements _$$_NoConnectionCopyWith<T, $Res> {
-  __$$_NoConnectionCopyWithImpl(
-      _$_NoConnection<T> _value, $Res Function(_$_NoConnection<T>) _then)
+class __$$NoConnectionImplCopyWithImpl<T, $Res>
+    extends _$NetworkResultCopyWithImpl<T, $Res, _$NoConnectionImpl<T>>
+    implements _$$NoConnectionImplCopyWith<T, $Res> {
+  __$$NoConnectionImplCopyWithImpl(
+      _$NoConnectionImpl<T> _value, $Res Function(_$NoConnectionImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_NoConnection<T> extends _NoConnection<T> {
-  const _$_NoConnection() : super._();
+class _$NoConnectionImpl<T> extends _NoConnection<T> {
+  const _$NoConnectionImpl() : super._();
 
   @override
   String toString() {
@@ -101,9 +101,9 @@ class _$_NoConnection<T> extends _NoConnection<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NoConnection<T>);
+        (other.runtimeType == runtimeType && other is _$NoConnectionImpl<T>);
   }
 
   @override
@@ -173,25 +173,25 @@ class _$_NoConnection<T> extends _NoConnection<T> {
 }
 
 abstract class _NoConnection<T> extends NetworkResult<T> {
-  const factory _NoConnection() = _$_NoConnection<T>;
+  const factory _NoConnection() = _$NoConnectionImpl<T>;
   const _NoConnection._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_ResultCopyWith<T, $Res> {
-  factory _$$_ResultCopyWith(
-          _$_Result<T> value, $Res Function(_$_Result<T>) then) =
-      __$$_ResultCopyWithImpl<T, $Res>;
+abstract class _$$ResultImplCopyWith<T, $Res> {
+  factory _$$ResultImplCopyWith(
+          _$ResultImpl<T> value, $Res Function(_$ResultImpl<T>) then) =
+      __$$ResultImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$_ResultCopyWithImpl<T, $Res>
-    extends _$NetworkResultCopyWithImpl<T, $Res, _$_Result<T>>
-    implements _$$_ResultCopyWith<T, $Res> {
-  __$$_ResultCopyWithImpl(
-      _$_Result<T> _value, $Res Function(_$_Result<T>) _then)
+class __$$ResultImplCopyWithImpl<T, $Res>
+    extends _$NetworkResultCopyWithImpl<T, $Res, _$ResultImpl<T>>
+    implements _$$ResultImplCopyWith<T, $Res> {
+  __$$ResultImplCopyWithImpl(
+      _$ResultImpl<T> _value, $Res Function(_$ResultImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -199,7 +199,7 @@ class __$$_ResultCopyWithImpl<T, $Res>
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(_$_Result<T>(
+    return _then(_$ResultImpl<T>(
       freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -210,8 +210,8 @@ class __$$_ResultCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_Result<T> extends _Result<T> {
-  const _$_Result(this.data) : super._();
+class _$ResultImpl<T> extends _Result<T> {
+  const _$ResultImpl(this.data) : super._();
 
   @override
   final T data;
@@ -222,10 +222,10 @@ class _$_Result<T> extends _Result<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Result<T> &&
+            other is _$ResultImpl<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -236,8 +236,8 @@ class _$_Result<T> extends _Result<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResultCopyWith<T, _$_Result<T>> get copyWith =>
-      __$$_ResultCopyWithImpl<T, _$_Result<T>>(this, _$identity);
+  _$$ResultImplCopyWith<T, _$ResultImpl<T>> get copyWith =>
+      __$$ResultImplCopyWithImpl<T, _$ResultImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -303,11 +303,11 @@ class _$_Result<T> extends _Result<T> {
 }
 
 abstract class _Result<T> extends NetworkResult<T> {
-  const factory _Result(final T data) = _$_Result<T>;
+  const factory _Result(final T data) = _$ResultImpl<T>;
   const _Result._() : super._();
 
   T get data;
   @JsonKey(ignore: true)
-  _$$_ResultCopyWith<T, _$_Result<T>> get copyWith =>
+  _$$ResultImplCopyWith<T, _$ResultImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
