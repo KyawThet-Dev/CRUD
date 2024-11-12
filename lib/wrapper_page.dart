@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:crud/core/presentation/router/app_router.gr.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -16,19 +15,20 @@ class _WrapperPageState extends State<WrapperPage> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: const [HomeRoute(), ContactRoute()],
+      routes: [HomeRoute(), ContactRoute(), ProductRoute()],
       appBarBuilder: (context, tabsRouter) {
         return AppBar(
           backgroundColor: Colors.blueAccent,
-          title: Text(
+          title: const Text(
             'Simple App',
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
           ),
         );
       },
       bottomNavigationBuilder: (context, tabsRouter) {
         return Container(
-          margin: EdgeInsets.only(left: 30, right: 30),
+          margin: const EdgeInsets.only(left: 30, right: 30),
           decoration: BoxDecoration(
               color: Colors.grey.withOpacity(0.2),
               borderRadius: BorderRadius.circular(25)),
@@ -39,7 +39,10 @@ class _WrapperPageState extends State<WrapperPage> {
                 SalomonBottomBarItem(
                     icon: const Icon(Icons.home), title: const Text('Home')),
                 SalomonBottomBarItem(
-                    icon: const Icon(Icons.add), title: const Text('Add'))
+                    icon: const Icon(Icons.list), title: const Text('Contact')),
+                SalomonBottomBarItem(
+                    icon: const Icon(Icons.production_quantity_limits_outlined),
+                    title: const Text('Product'))
               ]),
         );
       },

@@ -47,7 +47,9 @@ class ContactRemoteService {
       "id": ''
     };
     try {
-      final response = await _dio.post('/', data: body);
+      final response = await _dio.post(
+          'https://646ccc017b42c06c3b2c0977.mockapi.io/api/contact/',
+          data: body);
       if (response.statusCode == AppStrings.createCode) {
         return right(NetworkResult.result(response.statusMessage.toString()));
       } else {
@@ -77,7 +79,9 @@ class ContactRemoteService {
       "id": contact.id
     };
     try {
-      final response = await _dio.put('/${contact.id}', data: body);
+      final response = await _dio.put(
+          'https://646ccc017b42c06c3b2c0977.mockapi.io/api/contact/${contact.id}',
+          data: body);
       print(response.data);
       print(response.statusCode);
       print(response.statusMessage);
@@ -105,7 +109,8 @@ class ContactRemoteService {
   Future<Either<ResponseInfoError, NetworkResult<String>>> deleteContact(
       String id) async {
     try {
-      final response = await _dio.delete('/$id');
+      final response = await _dio.delete(
+          'https://646ccc017b42c06c3b2c0977.mockapi.io/api/contact/$id');
       print(response.data);
       print(response.statusCode);
       print(response.statusMessage);

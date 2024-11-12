@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "714198783637",
+    "project_id": "notification-83e1e",
+    "storage_bucket": "notification-83e1e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714198783637:android:e47f046333a241a72a6d9c",
+        "android_client_info": {
+          "package_name": "com.example.crud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5ZnNlozG57yw-XQM08Rs3IzATAnGSI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714198783637:android:3e748276f6a3c83c2a6d9c",
+        "android_client_info": {
+          "package_name": "com.firebase_noti.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5ZnNlozG57yw-XQM08Rs3IzATAnGSI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714198783637:android:c38b1702c12c8fba2a6d9c",
+        "android_client_info": {
+          "package_name": "com.noti.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5ZnNlozG57yw-XQM08Rs3IzATAnGSI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714198783637:android:27cb21a12c744f022a6d9c",
+        "android_client_info": {
+          "package_name": "com.noti_test.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5ZnNlozG57yw-XQM08Rs3IzATAnGSI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714198783637:android:f91225dec3548bc82a6d9c",
+        "android_client_info": {
+          "package_name": "com.systematic.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5ZnNlozG57yw-XQM08Rs3IzATAnGSI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

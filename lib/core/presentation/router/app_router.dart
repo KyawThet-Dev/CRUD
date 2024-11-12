@@ -9,9 +9,12 @@ class AppRouter extends $AppRouter {
     AutoRoute(page: WrapperRoute.page, path: '/', children: [
       AutoRoute(page: HomeRoute.page, path: 'home'),
       AutoRoute(page: ContactRoute.page, path: 'contact'),
+      AutoRoute(page: ProductRoute.page, path: 'product')
     ]),
     AutoRoute(page: ContactRoute.page, path: '/home'),
     AutoRoute(page: AddContactRoute.page, path: '/add'),
     AutoRoute(page: UpdateContactRoute.page, path: '/update'),
+    AutoRoute(page: PlayerRoute.page, path: '/video'),
+    AutoRoute(page: AboutRoute.page, path: '/about')
   ];
 }
