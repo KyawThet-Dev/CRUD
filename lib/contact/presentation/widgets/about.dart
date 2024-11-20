@@ -41,7 +41,8 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   _deleteData(String id) {
-    CollectionReference users = FirebaseFirestore.instance.collection('Users');
+    CollectionReference users =
+        FirebaseFirestore.instance.collection('Customer');
     return users
         .doc(id)
         .delete()
@@ -60,7 +61,7 @@ class _AboutPageState extends State<AboutPage> {
 
   Widget build(BuildContext context) {
     final Stream<QuerySnapshot> _userStream =
-        FirebaseFirestore.instance.collection('Users').snapshots();
+        FirebaseFirestore.instance.collection('Customer').snapshots();
 
     return SafeArea(
       child: Scaffold(
@@ -87,13 +88,18 @@ class _AboutPageState extends State<AboutPage> {
                   String id = data['uid'] ?? '';
                   return InkWell(
                     onTap: () => _showDialog(context, data, id),
-                    child: Card(
-                      child: ListTile(
-                          title: Text(data['email'] ?? ''),
-                          trailing: IconButton(
-                            onPressed: () => _deleteData(data['id']),
-                            icon: const Icon(Icons.delete),
-                          )),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      child: Card(
+                        shadowColor: Colors.blue,
+                        child: ListTile(
+                            title: Text(data['name'] ?? ''),
+                            trailing: IconButton(
+                              onPressed: () => _deleteData(data['name']),
+                              icon: const Icon(Icons.delete),
+                            )),
+                      ),
                     ),
                   );
                 }).toList(),

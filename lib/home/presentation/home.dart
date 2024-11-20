@@ -1,14 +1,10 @@
 import 'dart:developer';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:crud/contact/presentation/widgets/video_player.dart';
-import 'package:crud/core/presentation/router/app_router.gr.dart';
-import 'package:crud/home/infrastructure/home_remote_service.dart';
 import 'package:flutter/material.dart';
 import 'package:crud/home/domain/music_model.dart';
 import 'package:crud/home/shared/music_notifier_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:crud/contact/feat_contact.dart';
 
 final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
     GlobalKey<RefreshIndicatorState>();
@@ -23,7 +19,6 @@ class HomePage extends ConsumerStatefulWidget {
 
 class _HomePageState extends ConsumerState<HomePage> {
   List<MusicModel> musicList = [];
-  late final MusicModelRemote _musicRemote;
   final formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final albumController = TextEditingController();
@@ -164,7 +159,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                         decoration: InputDecoration(
                             hintText: 'Enter your name',
                             enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(
+                                borderRadius: const BorderRadius.all(
                                   Radius.circular(10),
                                 ),
                                 borderSide:
@@ -172,8 +167,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                             focusedBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.grey.shade300),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)))),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(10)))),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please type something';
@@ -181,7 +176,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                           return null;
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       TextFormField(
@@ -197,15 +192,15 @@ class _HomePageState extends ConsumerState<HomePage> {
                             enabledBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.grey.shade300),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(10))),
                             focusedBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.grey.shade300),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)))),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(10)))),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       TextFormField(
@@ -213,7 +208,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                         decoration: InputDecoration(
                             hintText: 'Enter your name',
                             enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.all(
+                                borderRadius: const BorderRadius.all(
                                   Radius.circular(10),
                                 ),
                                 borderSide:
@@ -221,8 +216,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                             focusedBorder: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.grey.shade300),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)))),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(10)))),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please type something';

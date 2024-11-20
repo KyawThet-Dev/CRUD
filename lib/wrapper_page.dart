@@ -15,7 +15,7 @@ class _WrapperPageState extends State<WrapperPage> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: [HomeRoute(), ContactRoute(), ProductRoute()],
+      routes: [HomeRoute(), CustomerRoute(), ProductRoute()],
       appBarBuilder: (context, tabsRouter) {
         return AppBar(
           backgroundColor: Colors.blueAccent,
@@ -39,7 +39,8 @@ class _WrapperPageState extends State<WrapperPage> {
                 SalomonBottomBarItem(
                     icon: const Icon(Icons.home), title: const Text('Home')),
                 SalomonBottomBarItem(
-                    icon: const Icon(Icons.list), title: const Text('Contact')),
+                    icon: const Icon(Icons.list),
+                    title: const Text('Customer')),
                 SalomonBottomBarItem(
                     icon: const Icon(Icons.production_quantity_limits_outlined),
                     title: const Text('Product'))

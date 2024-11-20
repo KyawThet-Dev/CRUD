@@ -8,7 +8,7 @@ class AppRouter extends $AppRouter {
   final List<AutoRoute> routes = [
     AutoRoute(page: WrapperRoute.page, path: '/', children: [
       AutoRoute(page: HomeRoute.page, path: 'home'),
-      AutoRoute(page: ContactRoute.page, path: 'contact'),
+      AutoRoute(page: CustomerRoute.page, path: 'customer'),
       AutoRoute(page: ProductRoute.page, path: 'product')
     ]),
     AutoRoute(page: ContactRoute.page, path: '/home'),

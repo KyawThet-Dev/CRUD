@@ -57,7 +57,6 @@ class _HomePageState extends ConsumerState<ContactPage>
           initial: () => debugPrint('contactNotifierProvider/ initial'),
           loading: () {
             debugPrint('contactNotifierProvider/ loading');
-            contactList.clear();
           },
           noConnection: () =>
               debugPrint('contactNotifierProvider/ noConnection'),
@@ -77,7 +76,6 @@ class _HomePageState extends ConsumerState<ContactPage>
           success: (data) {
             nameController.clear();
             phoneNumberController.clear();
-            Navigator.of(context).pop();
             ref.read(contactNotifierProvider.notifier).getContacts();
           });
     });
@@ -117,12 +115,12 @@ class _HomePageState extends ConsumerState<ContactPage>
                     title: Text(contactList[index].name),
                     subtitle: Text(contactList[index].phone),
                     trailing: IconButton(
-                        onPressed: () {
-                          ref
+                        onPressed: () async {
+                          await ref
                               .read(saveContactNotifierProvider.notifier)
                               .deleteContact(contactList[index].id);
                           setState(() {
-                            // contactList.removeAt(index);
+                            contactList.removeAt(index);
                           });
                         },
                         icon: const Icon(
